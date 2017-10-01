@@ -1,9 +1,17 @@
 <section>
-  <article ng-repeat="r in reviews.slice().reverse()">
-    <header>
-      <h1>{{r.date | date}} | {{r.coffeeShop.name}}</h1>
-      <h2>{{r.reviewer.email}}</h2>
-    </header>
-    <p>{{r.rating}}&#9733; - {{r.comments}}</p>
-  </article>
+
+	<div class = "search=block">
+	  <li>
+	    <input class= "form-control" name="search" placeholder="plate...">
+      <button ui-sref="search-button">search</button>
+	  </li>
+	</div>
+
+  	<article ng-repeat="r in reviews.slice().reverse()">
+    	  <header>
+	   <h1>{{r.date | date}} | {{r.coffeeShop.name}}</h1>
+           <h2>{{r.reviewer.email}}</h2>
+          </header>
+          <p>{{r.rating}}&#9733; - {{r.comments}}</p>
+        </article>
 </section>

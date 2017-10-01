@@ -7,11 +7,11 @@ module.exports = function(app) {
   var mysqlDs = app.dataSources.mysqlDs;
   //create all models
   async.parallel({
-    reviewers: async.apply(createReviewers),
-    coffeeShops: async.apply(createCoffeeShops),
+    reviewers: async.apply(createReviewers)
+   // coffeeShops: async.apply(createCoffeeShops),
   }, function(err, results) {
     if (err) throw err;
-    createReviews(results.reviewers, results.coffeeShops, function(err) {
+    createReviews(results.reviewers, /*results.coffeeShops,*/ function(err) {
       console.log('> models created sucessfully');
     });
   });

@@ -8,25 +8,25 @@
   <body>
     <header>
       <h1>Coffee shop reviews</h1>
-      <h2 ng-show="currentUser">Hello {{currentUser.email}}</h2>
+     <!-- <h2 >Hello {{currentUser.email}}</h2>-->
       <nav>
         <ul>
           <li>
             <a ui-sref="all-reviews" ui-sref-active="active">All reviews</a>
           </li>
-          <li ng-hide="currentUser">
+          <li>
             <a ui-sref="sign-up" ui-sref-active="active">Sign up</a>
           </li>
-          <li ng-show="currentUser">
+          <li>
             <a ui-sref="my-reviews" ui-sref-active="active">My Reviews</a>
           </li>
-          <li ng-show="currentUser">
+          <li>
             <a ui-sref="add-review" ui-sref-active="active">Add Review</a>
           </li>
-          <li ng-hide="currentUser">
+         <li>
             <a ui-sref="login" ui-sref-active="active">Log in</a>
           </li>
-          <li ng-show="currentUser">
+          <li>
             <a ui-sref="logout" ui-sref-active="active">Log out</a>
           </li>
         </ul>

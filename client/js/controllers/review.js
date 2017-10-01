@@ -54,7 +54,7 @@ angular
         $state.go('my-reviews');
       });
   }])
-  .controller('EditReviewController', ['$scope', '$q', 'CoffeeShop', 'Review',
+  .controller('SearchController', ['$scope', '$q', 'CoffeeShop', 'Review',
       '$stateParams', '$state', function($scope, $q, CoffeeShop, Review,
       $stateParams, $state) {
     $scope.action = 'Edit';

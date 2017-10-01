@@ -15,23 +15,23 @@ angular
         url: '/add-review',
         templateUrl: 'views/review-form.html',
         controller: 'AddReviewController',
-        authenticate: true
+       // authenticate: true
       })
       .state('all-reviews', {
         url: '/all-reviews',
         templateUrl: 'views/all-reviews.html',
         controller: 'AllReviewsController'
       })
-      .state('edit-review', {
-        url: '/edit-review/:id',
-        templateUrl: 'views/review-form.html',
-        controller: 'EditReviewController',
-        authenticate: true
+      .state('button-search', {
+        url: '/button-search/:id',
+        //templateUrl: 'views/all-reviews.html',
+        controller: 'SearchController',
+       // authenticate: true
       })
       .state('delete-review', {
         url: '/delete-review/:id',
         controller: 'DeleteReviewController',
-        authenticate: true
+       // authenticate: true
       })
       .state('forbidden', {
         url: '/forbidden',
@@ -50,7 +50,7 @@ angular
         url: '/my-reviews',
         templateUrl: 'views/my-reviews.html',
         controller: 'MyReviewsController',
-        authenticate: true
+        //authenticate: true
       })
       .state('sign-up', {
         url: '/sign-up',
